@@ -7,29 +7,91 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
+
 
 class SignUpViewController: UIViewController {
-
+    
+    var ref : DatabaseReference!
+    
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var signUpButton: UIButton! {
+        didSet {
+            signUpButton.addTarget(self, action: #selector(signUpUser), for: .touchUpInside)
+        }
     }
-    */
+    
+  
+    
+    func signUpUser() {
+        guard let name = nameTextField.text,
+            let email = emailTextField.text,
+            let password = passwordTextField.text,
+            let confirmPassword = confirmPasswordTextField.text else {return}
+        
+        if password != confirmPassword {
+            createErrorAlert("Password Error", "Passwords do not match")
+            return
+        } else if email == "" || password == ""{
+            createErrorAlert("Missing input field", "Input field must be filled")
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if let validError = error {
+                self.createErrorAlert("Error", validError.localizedDescription)
+            }
+            
+            if let validUser = user {
+                let ref = Database.database().reference()
+                
+                //let randomAge = arc4random_uniform(30) + 1
+                
+                
+              //  let post : [String : Any] = ["age" : randomAge, "name" : email, "imageURL" : self.profilePicURL, "filename" : self.currFilename]
+                let post : [String : Any] = ["name" : name ,"email" : email ]
 
+                ref.child("contacts").child(validUser.uid).setValue(post)
+                
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+        }
+    }
+    
+    
+    func createErrorAlert(_ title: String, _ message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(action)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+   
+    
+    
 }
+
+
+

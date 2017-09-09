@@ -7,3 +7,19 @@
 //
 
 import Foundation
+
+
+class Contact {
+    var id : String = ""
+    var name : String = ""
+    var email : String = ""
+
+    
+    init(anID : String, aName : String, anEmail : String) {
+        id = anID
+        name = aName
+        email = anEmail
+    }
+    
+}
+

@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847F1A51114C7899E0805DFA /* Pods_NextChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */; };
 		F8EA023E1F63C15500947178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA023D1F63C15500947178 /* AppDelegate.swift */; };
 		F8EA02401F63C15500947178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA023F1F63C15500947178 /* ViewController.swift */; };
 		F8EA02431F63C15500947178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EA02411F63C15500947178 /* Main.storyboard */; };
 		F8EA02451F63C15500947178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8EA02441F63C15500947178 /* Assets.xcassets */; };
 		F8EA02481F63C15500947178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EA02461F63C15500947178 /* LaunchScreen.storyboard */; };
+		F8EA02501F63C1A600947178 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F8EA024F1F63C1A600947178 /* GoogleService-Info.plist */; };
+		F8EA02521F63C2CA00947178 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA02511F63C2CA00947178 /* LoginViewController.swift */; };
+		F8EA02541F63C2DA00947178 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA02531F63C2DA00947178 /* SignUpViewController.swift */; };
+		F8EA02561F63CCEE00947178 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA02551F63CCEE00947178 /* Contact.swift */; };
+		F8EA02581F63D48B00947178 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA02571F63D48B00947178 /* ContactTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131A31A23F495F4198717C1D /* Pods-NextChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextChat/Pods-NextChat.release.xcconfig"; sourceTree = "<group>"; };
+		A91033B5DCC6E4087BC4A4D1 /* Pods-NextChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextChat/Pods-NextChat.debug.xcconfig"; sourceTree = "<group>"; };
+		BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EA023A1F63C15500947178 /* NextChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EA023D1F63C15500947178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EA023F1F63C15500947178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +31,11 @@
 		F8EA02441F63C15500947178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8EA02471F63C15500947178 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8EA02491F63C15500947178 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8EA024F1F63C1A600947178 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8EA02511F63C2CA00947178 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8EA02531F63C2DA00947178 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F8EA02551F63CCEE00947178 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		F8EA02571F63D48B00947178 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847F1A51114C7899E0805DFA /* Pods_NextChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		675E2B3C495F0A1BF9A7CB50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A91033B5DCC6E4087BC4A4D1 /* Pods-NextChat.debug.xcconfig */,
+				131A31A23F495F4198717C1D /* Pods-NextChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87610B5441A5940073DD62F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8EA02311F63C15500947178 = {
 			isa = PBXGroup;
 			children = (
 				F8EA023C1F63C15500947178 /* NextChat */,
 				F8EA023B1F63C15500947178 /* Products */,
+				675E2B3C495F0A1BF9A7CB50 /* Pods */,
+				87610B5441A5940073DD62F7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +91,14 @@
 				F8EA023D1F63C15500947178 /* AppDelegate.swift */,
 				F8EA023F1F63C15500947178 /* ViewController.swift */,
 				F8EA02411F63C15500947178 /* Main.storyboard */,
+				F8EA02571F63D48B00947178 /* ContactTableViewCell.swift */,
+				F8EA02511F63C2CA00947178 /* LoginViewController.swift */,
+				F8EA02531F63C2DA00947178 /* SignUpViewController.swift */,
+				F8EA02551F63CCEE00947178 /* Contact.swift */,
 				F8EA02441F63C15500947178 /* Assets.xcassets */,
 				F8EA02461F63C15500947178 /* LaunchScreen.storyboard */,
 				F8EA02491F63C15500947178 /* Info.plist */,
+				F8EA024F1F63C1A600947178 /* GoogleService-Info.plist */,
 			);
 			path = NextChat;
 			sourceTree = "<group>";
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8EA024C1F63C15500947178 /* Build configuration list for PBXNativeTarget "NextChat" */;
 			buildPhases = (
+				63AA7E074BCAF220519BCD5E /* [CP] Check Pods Manifest.lock */,
 				F8EA02361F63C15500947178 /* Sources */,
 				F8EA02371F63C15500947178 /* Frameworks */,
 				F8EA02381F63C15500947178 /* Resources */,
+				7CEE9A006EA6A30343A6F210 /* [CP] Embed Pods Frameworks */,
+				58C39CA92C229016C1AE9329 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8EA02481F63C15500947178 /* LaunchScreen.storyboard in Resources */,
+				F8EA02501F63C1A600947178 /* GoogleService-Info.plist in Resources */,
 				F8EA02451F63C15500947178 /* Assets.xcassets in Resources */,
 				F8EA02431F63C15500947178 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +175,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58C39CA92C229016C1AE9329 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NextChat/Pods-NextChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63AA7E074BCAF220519BCD5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CEE9A006EA6A30343A6F210 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NextChat/Pods-NextChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NextChat/Pods-NextChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F8EA02361F63C15500947178 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8EA02581F63D48B00947178 /* ContactTableViewCell.swift in Sources */,
+				F8EA02521F63C2CA00947178 /* LoginViewController.swift in Sources */,
 				F8EA02401F63C15500947178 /* ViewController.swift in Sources */,
+				F8EA02561F63CCEE00947178 /* Contact.swift in Sources */,
+				F8EA02541F63C2DA00947178 /* SignUpViewController.swift in Sources */,
 				F8EA023E1F63C15500947178 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +368,7 @@
 		};
 		F8EA024D1F63C15500947178 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91033B5DCC6E4087BC4A4D1 /* Pods-NextChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77P5578ZUS;
@@ -274,6 +382,7 @@
 		};
 		F8EA024E1F63C15500947178 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131A31A23F495F4198717C1D /* Pods-NextChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 77P5578ZUS;
@@ -304,6 +413,7 @@
 				F8EA024E1F63C15500947178 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
