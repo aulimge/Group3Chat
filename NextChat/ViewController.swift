@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         ref = Database.database().reference()
         
         //observer child added works as a loop return each child individually
-        ref.child("contact").observe(.childAdded, with: { (snapshot) in
+        ref.child("contacts").observe(.childAdded, with: { (snapshot) in
             guard let info =  snapshot.value as? [String : Any] else {return}
             print("info : \(info)")
             print(snapshot)
@@ -161,14 +161,14 @@ extension ViewController : UITableViewDataSource {
 
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let destination = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else {return}
-//        
-//        
-//        let selectedStudent = students[indexPath.row]
-//        
-//        destination.selectedStudent = selectedStudent
-//        navigationController?.pushViewController(destination, animated: true)
-//        
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else {return}
+        
+        
+        let selectedContact = contacts[indexPath.row]
+        
+        destination.selectedContact = selectedContact
+        navigationController?.pushViewController(destination, animated: true)
+        
         
     }
     
