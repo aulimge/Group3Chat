@@ -70,6 +70,7 @@ class ViewController: UIViewController {
                 let  index = self.contacts.count - 1
                 let indexPath = IndexPath(row: index, section: 0)
                 self.contactsTableView.insertRows(at: [indexPath], with: .right)
+    
                 
                 
             }
