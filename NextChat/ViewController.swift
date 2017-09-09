@@ -65,9 +65,6 @@ class ViewController: UIViewController {
                 //append to contact array
                 self.contacts.append(newContact)
                 
-                //this is  inefficient
-                //self.studentsTableView.reloadData()
-                
                 //this is more efficient
                 //insert indv rows as we retrive idv items
                 let  index = self.contacts.count - 1
