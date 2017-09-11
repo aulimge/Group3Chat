@@ -12,6 +12,7 @@
 		847F1A51114C7899E0805DFA /* Pods_NextChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */; };
 		F81D11B71F63EC36007FEDBD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D11B61F63EC36007FEDBD /* ProfileViewController.swift */; };
 		F81D11B91F640102007FEDBD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D11B81F640102007FEDBD /* MessageViewController.swift */; };
+		F81D11BB1F664642007FEDBD /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D11BA1F664642007FEDBD /* Message.swift */; };
 		F8EA023E1F63C15500947178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA023D1F63C15500947178 /* AppDelegate.swift */; };
 		F8EA02401F63C15500947178 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EA023F1F63C15500947178 /* ViewController.swift */; };
 		F8EA02431F63C15500947178 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8EA02411F63C15500947178 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D11B61F63EC36007FEDBD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F81D11B81F640102007FEDBD /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		F81D11BA1F664642007FEDBD /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		F8EA023A1F63C15500947178 /* NextChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EA023D1F63C15500947178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EA023F1F63C15500947178 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				F8EA02511F63C2CA00947178 /* LoginViewController.swift */,
 				F8EA02531F63C2DA00947178 /* SignUpViewController.swift */,
 				F8EA02551F63CCEE00947178 /* Contact.swift */,
+				F81D11BA1F664642007FEDBD /* Message.swift */,
 				F8EA02441F63C15500947178 /* Assets.xcassets */,
 				F8EA02461F63C15500947178 /* LaunchScreen.storyboard */,
 				F8EA02491F63C15500947178 /* Info.plist */,
@@ -258,6 +261,7 @@
 				604387DC1F66400B00CB765A /* OthersUserTableViewCell.swift in Sources */,
 				F81D11B91F640102007FEDBD /* MessageViewController.swift in Sources */,
 				F8EA02401F63C15500947178 /* ViewController.swift in Sources */,
+				F81D11BB1F664642007FEDBD /* Message.swift in Sources */,
 				F8EA02561F63CCEE00947178 /* Contact.swift in Sources */,
 				F81D11B71F63EC36007FEDBD /* ProfileViewController.swift in Sources */,
 				F8EA02541F63C2DA00947178 /* SignUpViewController.swift in Sources */,
