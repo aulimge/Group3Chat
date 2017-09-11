@@ -179,12 +179,12 @@ extension ViewController : UITableViewDataSource {
 
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let destination = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as? ProfileViewController else {return}
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "MessageViewController") as? MessageViewController else {return}
         
         
         let selectedContact = contacts[indexPath.row]
         
-        destination.selectedContact = selectedContact
+        destination.selectedProfileContact = selectedContact
         navigationController?.pushViewController(destination, animated: true)
         
         
