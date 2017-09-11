@@ -20,10 +20,14 @@ class ViewController: UIViewController {
         didSet {
             contactsTableView.delegate = self
             contactsTableView.dataSource = self
+            
         }
     }
     
+    func deletingContracts() {
     
+    }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +35,18 @@ class ViewController: UIViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(signOutUser))
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Edit", style: .done, target: self, action: #selector(editTapped))
         
+    }
+    
+    func editTapped(sender: UIBarButtonItem) {
+        if sender.title == "Done" {
+            contactsTableView.isEditing = false
+            sender.title = "Edit"
+        } else if sender.title == "Edit" {
+            contactsTableView.isEditing = true
+            sender.title = "Done"
+        }
     }
     
     func signOutUser() {
@@ -135,6 +150,7 @@ extension ViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as?
             ContactTableViewCell
             else { return UITableViewCell() }
@@ -145,18 +161,20 @@ extension ViewController : UITableViewDataSource {
         cell.emailLabel.text = contact.email
         
         
-        
-        
-        // let imageURL = student.imageURL
-        
-        //  cell.profileImageView.loadImage(from: imageURL)
-        
+
         return cell
         
+        
+        //editing and delete table.
+        
+        func viewWillAppear(_ animated: Bool) {
+            setEditing(false, animated: true)
+        }
+
     }
     
+    
 }
-
 
 
 extension ViewController : UITableViewDelegate {
@@ -172,6 +190,18 @@ extension ViewController : UITableViewDelegate {
         
     }
     
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool{
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        if editingStyle == .delete{
+            contacts.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+        
+    }
     
     
 }
