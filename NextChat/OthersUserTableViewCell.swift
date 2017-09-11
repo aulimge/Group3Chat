@@ -9,6 +9,13 @@
 import UIKit
 
 class OthersUserTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var othersUserName: UILabel!
+    
+    @IBOutlet weak var msgOthersUser: UITextView!
+    
+    @IBOutlet weak var timeStampOthersUser: UITextField!
 
     override func awakeFromNib() {
         super.awakeFromNib()

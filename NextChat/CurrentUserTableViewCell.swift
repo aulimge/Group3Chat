@@ -1,14 +1,14 @@
-//
-//  CurrentUserTableViewCell.swift
-//  NextChat
-//
-//  Created by Hoang Thu Ha on 11/9/17.
-//  Copyright © 2017 Audrey Lim. All rights reserved.
-//
-
 import UIKit
 
 class CurrentUserTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var currentUserName: UILabel!
+    
+    @IBOutlet weak var msgCurrentUser: UITextView!
+
+    @IBOutlet weak var timeStampCurrentUser: UITextField!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

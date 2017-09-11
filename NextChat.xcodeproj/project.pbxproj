@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		604387DA1F663FFB00CB765A /* CurrentUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604387D91F663FFB00CB765A /* CurrentUserTableViewCell.swift */; };
+		604387DC1F66400B00CB765A /* OthersUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604387DB1F66400B00CB765A /* OthersUserTableViewCell.swift */; };
 		847F1A51114C7899E0805DFA /* Pods_NextChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */; };
 		F81D11B71F63EC36007FEDBD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D11B61F63EC36007FEDBD /* ProfileViewController.swift */; };
 		F81D11B91F640102007FEDBD /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F81D11B81F640102007FEDBD /* MessageViewController.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		131A31A23F495F4198717C1D /* Pods-NextChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-NextChat/Pods-NextChat.release.xcconfig"; sourceTree = "<group>"; };
+		604387D91F663FFB00CB765A /* CurrentUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserTableViewCell.swift; sourceTree = "<group>"; };
+		604387DB1F66400B00CB765A /* OthersUserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OthersUserTableViewCell.swift; sourceTree = "<group>"; };
 		A91033B5DCC6E4087BC4A4D1 /* Pods-NextChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NextChat/Pods-NextChat.debug.xcconfig"; sourceTree = "<group>"; };
 		BEFB5AA88148069308D6EDC8 /* Pods_NextChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F81D11B61F63EC36007FEDBD /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				F8EA023D1F63C15500947178 /* AppDelegate.swift */,
 				F8EA023F1F63C15500947178 /* ViewController.swift */,
 				F8EA02411F63C15500947178 /* Main.storyboard */,
+				604387D91F663FFB00CB765A /* CurrentUserTableViewCell.swift */,
+				604387DB1F66400B00CB765A /* OthersUserTableViewCell.swift */,
 				F81D11B81F640102007FEDBD /* MessageViewController.swift */,
 				F81D11B61F63EC36007FEDBD /* ProfileViewController.swift */,
 				F8EA02571F63D48B00947178 /* ContactTableViewCell.swift */,
@@ -246,8 +252,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604387DA1F663FFB00CB765A /* CurrentUserTableViewCell.swift in Sources */,
 				F8EA02581F63D48B00947178 /* ContactTableViewCell.swift in Sources */,
 				F8EA02521F63C2CA00947178 /* LoginViewController.swift in Sources */,
+				604387DC1F66400B00CB765A /* OthersUserTableViewCell.swift in Sources */,
 				F81D11B91F640102007FEDBD /* MessageViewController.swift in Sources */,
 				F8EA02401F63C15500947178 /* ViewController.swift in Sources */,
 				F8EA02561F63CCEE00947178 /* Contact.swift in Sources */,
