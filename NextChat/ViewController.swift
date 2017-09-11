@@ -57,10 +57,12 @@ class ViewController: UIViewController {
             print(snapshot.key)
             
             //cast snapshot.value to correct Datatype
-             if let name = info["name"] as? String {
+            if let name = info["name"] as? String,
+                let email = info["email"] as? String
+            {
                 
                 //create new contact object
-                let newContact = Contact(anID: snapshot.key, aName: name, anEmail: "nil")
+                let newContact = Contact(anID: snapshot.key, aName: name, anEmail: email)
                 
                 //append to contact array
                 self.contacts.append(newContact)
@@ -70,7 +72,7 @@ class ViewController: UIViewController {
                 let  index = self.contacts.count - 1
                 let indexPath = IndexPath(row: index, section: 0)
                 self.contactsTableView.insertRows(at: [indexPath], with: .right)
-    
+                
                 
                 
             }
@@ -113,7 +115,7 @@ class ViewController: UIViewController {
             }) {
                 let changedContact = self.contacts[matchedIndex]
                 changedContact.name = name
-
+                
                 
                 
                 let indexPath = IndexPath(row: matchedIndex, section: 0)
@@ -141,13 +143,13 @@ extension ViewController : UITableViewDataSource {
         
         cell.nameLabel.text = contact.name
         cell.emailLabel.text = contact.email
-    
         
         
         
-       // let imageURL = student.imageURL
-       
-      //  cell.profileImageView.loadImage(from: imageURL)
+        
+        // let imageURL = student.imageURL
+        
+        //  cell.profileImageView.loadImage(from: imageURL)
         
         return cell
         
