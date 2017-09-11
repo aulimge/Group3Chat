@@ -60,7 +60,7 @@ class ViewController: UIViewController {
              if let name = info["name"] as? String {
                 
                 //create new contact object
-                let newContact = Contact(anID: snapshot.key, aName: name, anEmail: "")
+                let newContact = Contact(anID: snapshot.key, aName: name, anEmail: "nil")
                 
                 //append to contact array
                 self.contacts.append(newContact)
