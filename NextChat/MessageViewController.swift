@@ -11,27 +11,30 @@ class MessageViewController: UIViewController {
     var messages : [Message] = []
     
     
-    @IBOutlet var tableView: UIView!
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         
-        //CurrentUserTableViewCell.dataSource = self
-        //OthersUserTableViewCell.dataSource = self
-        
+     
         
         guard let nameMessage = selectedProfileContact?.name
             else {return}
         
         messageName.text = nameMessage
         
+        fetchMessageData()
     }
     
     
 }
 
+func fetchMessageData() {
+    
+    
+}
 
 extension MessageViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,41 +43,53 @@ extension MessageViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var identifier = ""
-        
-        if indexPath.row == 0 {
-            //display foodcell
-            identifier = "cellUser"
-            
-        } else {
-            //display drinkcell
-            identifier = "cellOthers"
-        }
-
-        
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        
-        if let cellUser = cell as? CurrentUserTableViewCell {
-            //1. Set the Delegate
-            cellUser.delegate = self
-            return cellUser
-        }
-        
-        if let cellOthers = cell as? OthersUserTableViewCell {
-            //1. Set the Delegate
-            cellOthers.delegate = self
-            return cellOthers
-        }
-
-
         
         let message = messages[indexPath.row]
+ 
         
-        cell.currentUserName.text = message.senderName
-        cell.msgCurrentUser.text = message.message
-        cell.timeStampCurrentUser.text = message.msgTimestamp
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellUser", for: indexPath) as? CurrentUserTableViewCell
+                else { return UITableViewCell() }
 
+            
+            cell.currentUserName.text = message.senderName
+            cell.msgCurrentUser.text = message.message
+            cell.timeStampCurrentUser.text = message.msgTimestamp
+            
+            return cell
+            
+        } else {
+            //display OtherUserCell
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "othersUser", for: indexPath) as? OthersUserTableViewCell
+                else { return UITableViewCell() }
+            
+            
+            cell.othersUserName.text = message.otherUserName
+            cell.othersUserName.text = message.message
+            cell.timeStampOthersUser.text = message.msgTimestamp
+            
+            return cell
+        }
+
+        
+        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+//        
+//        if let cellUser = cell as? CurrentUserTableViewCell {
+//            //1. Set the Delegate
+//            cellUser.delegate = self
+//            return cellUser
+//        }
+//        
+//        if let cellOthers = cell as? OthersUserTableViewCell {
+//            //1. Set the Delegate
+//            cellOthers.delegate = self
+//            return cellOthers
+//        }
+
+
+        
+        
         
         
        // cell.emailLabel.text = contact.email
@@ -86,7 +101,7 @@ extension MessageViewController : UITableViewDataSource {
         
         //  cell.profileImageView.loadImage(from: imageURL)
         
-        return cell
+        //return cell
         
     }
     
